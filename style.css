@@ -1,0 +1,595 @@
+/* ════════════════════════════════════════════════════════════
+   Nguyen Trung Nghia — Curriculum Vitae
+   Style: Harvard-inspired · ATS-friendly · Minimalist
+   ════════════════════════════════════════════════════════════ */
+
+
+/* ── RESET ──────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ── DESIGN TOKENS ──────────────────────────────────────────── */
+:root {
+  --navy:    #1c3557;
+  --accent:  #2552a0;
+  --ink:     #18181b;
+  --sub:     #536070;
+  --divider: #c3d0df;
+  --page-bg: #e6ecf3;
+  --white:   #ffffff;
+
+  --f-body:  'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  --f-serif: 'EB Garamond', Georgia, 'Times New Roman', serif;
+}
+
+
+/* ── BASE ───────────────────────────────────────────────────── */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--f-body);
+  color: var(--ink);
+  background: var(--page-bg);
+  padding: 28px 20px;
+  line-height: 1.5;
+}
+
+
+/* ── EXPORT PDF BUTTON ──────────────────────────────────────── */
+.export-btn {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 1000;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--navy);
+  color: var(--white);
+  border: none;
+  padding: 10px 22px;
+  font-family: var(--f-body);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 14px rgba(28, 53, 87, 0.32);
+  transition: background 0.18s ease, box-shadow 0.18s ease;
+}
+
+.export-btn:hover {
+  background: var(--accent);
+  box-shadow: 0 4px 18px rgba(37, 82, 160, 0.38);
+}
+
+.export-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+
+/* ── A4 PAGE CONTAINER ──────────────────────────────────────── */
+.cv-page {
+  background: var(--white);
+  width: 210mm;
+  margin: 0 auto;
+  padding: 14mm 17mm 12mm;
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.11),
+    0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+
+/* ── HEADER ─────────────────────────────────────────────────── */
+.cv-header {
+  text-align: center;
+  padding-bottom: 9px;
+  border-bottom: 1.5px solid var(--navy);
+  margin-bottom: 11px;
+}
+
+.cv-name {
+  font-family: var(--f-serif);
+  font-size: 26pt;
+  font-weight: 600;
+  color: var(--navy);
+  letter-spacing: 0.01em;
+  line-height: 1;
+}
+
+.cv-headline {
+  font-size: 9pt;
+  font-weight: 400;
+  color: var(--sub);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+address.cv-contact {
+  font-style: normal;
+  font-size: 8.8pt;
+  color: var(--sub);
+  margin-top: 7px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0 1px;
+  line-height: 1.6;
+}
+
+.cv-contact a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.cv-contact a:hover {
+  text-decoration: underline;
+}
+
+.dot {
+  color: var(--divider);
+  padding: 0 5px;
+  user-select: none;
+}
+
+
+/* ── SECTION ─────────────────────────────────────────────────── */
+.cv-section {
+  margin-bottom: 10px;
+}
+
+.cv-section.last {
+  margin-bottom: 0;
+}
+
+.section-title {
+  font-family: "Inter", sans-serif;  
+  font-size: 11pt;
+  font-weight: 600;
+  color: var(--navy);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding-bottom: 3px;
+  border-bottom: 0.75px solid var(--divider);
+  margin-bottom: 7px;
+}
+
+
+/* ── ENTRY (education / research / projects) ─────────────────── */
+.entry {
+  margin-bottom: 7px;
+}
+
+.entry:last-child {
+  margin-bottom: 0;
+}
+
+.entry-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 2px 8px;
+}
+
+.entry-row.sub {
+  margin-top: 1px;
+}
+
+.entry-org {
+  font-size: 10pt;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.3;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0 4px;
+}
+
+.entry-date {
+  font-size: 7.8pt;
+  color: var(--sub);
+  opacity: 0.72;
+  white-space: nowrap;
+  font-weight: 400;
+  flex-shrink: 0;
+}
+
+.entry-role {
+  font-size: 9pt;
+  font-style: italic;
+  color: var(--sub);
+  font-weight: 400;
+}
+
+.entry-detail {
+  font-size: 7.8pt;
+  color: var(--sub);
+  opacity: 0.72;
+  font-weight: 400;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+
+/* ── BULLET LIST ─────────────────────────────────────────────── */
+ul.bullets {
+  list-style: none;
+  padding: 0;
+  margin-top: 4px;
+}
+
+ul.bullets li {
+  font-size: 9pt;
+  color: var(--ink);
+  line-height: 1.5;
+  padding-left: 13px;
+  position: relative;
+  margin-bottom: 2px;
+}
+
+ul.bullets li:last-child {
+  margin-bottom: 0;
+}
+
+ul.bullets li::before {
+  content: '\2013'; /* en dash */
+  position: absolute;
+  left: 0;
+  color: var(--navy);
+  font-weight: 600;
+}
+
+
+/* ── SUMMARY ─────────────────────────────────────────────────── */
+.summary-text {
+  font-size: 9pt;
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+
+/* ── SKILLS GRID ─────────────────────────────────────────────── */
+dl.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3px 24px;
+}
+
+.skill-item {
+  display: flex;
+  gap: 0px;
+  align-items: baseline;
+  font-size: 9pt;
+  line-height: 1.48;
+}
+
+.skill-item dt {
+  font-weight: 600;
+  color: var(--ink);
+  min-width: 72px;
+  flex-shrink: 0;
+}
+
+.skill-item dd {
+  color: var(--sub);
+  font-weight: 400;
+}
+
+/* Full-width skill row (Soft Skills) */
+.skill-item.skill-full {
+  grid-column: 1 / -1;
+}
+
+.skill-item.skill-full dt {
+  min-width: 72px;
+}
+
+
+/* ── PROJECT LINKS ───────────────────────────────────────────── */
+.proj-link {
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid var(--divider);
+  padding-bottom: 0.5px;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.proj-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.ext-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 8pt;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.ext-link:hover {
+  text-decoration: underline;
+}
+
+.tech-stack {
+  font-size: 8pt;
+  color: var(--sub);
+  font-style: italic;
+  margin: 2px 0 3px;
+  letter-spacing: 0.01em;
+}
+
+/* Project description line */
+.proj-desc {
+  font-size: 8.8pt;
+  color: var(--sub);
+  line-height: 1.5;
+  margin-bottom: 4px;
+  font-style: normal;
+}
+
+
+/* ── SIMPLE LINE (certifications) ───────────────────────────── */
+.simple-line {
+  font-size: 9pt;
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+.simple-line .dot {
+  color: var(--divider);
+}
+
+/* Certificate view link */
+.cert-link {
+  margin-left: 8px;
+  font-size: 8.5pt;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.cert-link:hover {
+  text-decoration: underline;
+}
+
+
+/* ── LANGUAGES ───────────────────────────────────────────────── */
+dl.lang-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3px 0;
+}
+
+.lang-item {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  font-size: 9pt;
+  line-height: 1.5;
+}
+
+.lang-item dt {
+  font-weight: 600;
+  color: var(--ink);
+  min-width: 88px;
+  flex-shrink: 0;
+}
+
+.lang-item dd {
+  color: var(--sub);
+}
+
+/* ── FOOTER ──────────────────────────────────────────────────── */
+.cv-footer {
+  margin-top: 14px;
+  padding-top: 8px;
+  border-top: 0.75px solid var(--divider);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  font-size: 7.8pt;
+  color: var(--sub);
+}
+
+.footer-identity {
+  font-weight: 500;
+  color: var(--ink);
+  opacity: 0.4;
+  font-style: italic;
+}
+
+.footer-meta {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  opacity: 0.5;
+  font-style: italic;
+}
+
+.footer-meta a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.footer-meta a:hover {
+  text-decoration: underline;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   PRINT STYLES
+   ═══════════════════════════════════════════════════════════════ */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 10mm 12mm 14mm;
+
+    /* Suppress Chrome's default date, title, URL headers/footers.
+       Supported in Chrome 119+. For older browsers, uncheck
+       "Headers and footers" manually in the print dialog. */
+    @top-left    { content: ""; }
+    @top-center  { content: ""; }
+    @top-right   { content: ""; }
+    @bottom-left {
+      content: "Nguyen Trung Nghia  \2013  May 2026";
+      font-family: 'Inter', Arial, sans-serif;
+      font-size: 7.8pt;
+      color: #536070;
+    }
+    @bottom-center { content: ""; }
+    @bottom-right {
+      content: counter(page) " / " counter(pages);
+      font-family: 'Inter', Arial, sans-serif;
+      font-size: 8pt;
+      color: #536070;
+    }
+  }
+
+  html,
+  body {
+    background: var(--white);
+    padding: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .export-btn {
+    display: none !important;
+  }
+
+  .cv-page {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+  }
+
+  /* Allow sections to break across pages; only individual entries stay intact */
+  .entry {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Do not print URL after links */
+  a[href]::after {
+    content: none !important;
+  }
+
+  /* Keep project titles legible in print */
+  .proj-link {
+    color: var(--ink) !important;
+    border-bottom: none !important;
+  }
+
+  a {
+    text-decoration: none !important;
+  }
+
+  .cv-contact a,
+  .ext-link,
+  .cert-link,
+  .footer-meta a {
+    color: var(--accent) !important;
+  }
+
+  /* Footer is rendered by @page margin-box on every page — hide HTML version */
+  .cv-footer {
+    display: none !important;
+  }
+
+  /* Keep section title rule visible */
+  .section-title {
+    border-bottom-color: #a0afbe !important;
+  }
+
+  /* ── Uniform spacing expansion (×1.55) to fill page 1 ── */
+  .cv-header {
+    padding-bottom: 14px;
+    margin-bottom: 17px;
+  }
+
+  .section-title {
+    padding-bottom: 5px;
+    margin-bottom: 11px;
+  }
+
+  .cv-section {
+    margin-bottom: 16px;
+  }
+
+  .entry {
+    margin-bottom: 11px;
+  }
+
+  .summary-text {
+    line-height: 1.72;
+  }
+
+  ul.bullets {
+    margin-top: 6px;
+  }
+
+  ul.bullets li {
+    line-height: 1.62;
+    margin-bottom: 3px;
+  }
+
+  .tech-stack {
+    margin: 3px 0 5px;
+  }
+
+  .proj-desc {
+    line-height: 1.62;
+    margin-bottom: 6px;
+  }
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   RESPONSIVE — small screens / mobile preview
+   ═══════════════════════════════════════════════════════════════ */
+@media screen and (max-width: 750px) {
+  body {
+    padding: 0;
+    background: var(--white);
+  }
+
+  .cv-page {
+    width: 100%;
+    padding: 20px 16px;
+    box-shadow: none;
+  }
+
+  .cv-name {
+    font-size: 20pt;
+  }
+
+  dl.skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .export-btn {
+    top: 10px;
+    right: 10px;
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+}

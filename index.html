@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CV — Nguyen Trung Nghia, Fullstack Developer &amp; DevOps Enthusiast" />
+  <title>Nguyen Trung Nghia — CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══ EXPORT PDF BUTTON (hidden on print) ═══ -->
+  <button class="export-btn" onclick="window.print()" title="Save as PDF: choose 'Save as PDF' in the print dialog">
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+         fill="none" stroke="currentColor" stroke-width="2.3"
+         stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+      <polyline points="7 10 12 15 17 10"/>
+      <line x1="12" y1="15" x2="12" y2="3"/>
+    </svg>
+    Export PDF
+  </button>
+
+  <main class="cv-page" role="main">
+
+    <!-- ══════════════════════════════ HEADER ══════════════════════════════ -->
+    <header class="cv-header">
+      <h1 class="cv-name">Nguyen Trung Nghia</h1>
+      <p class="cv-headline">Fullstack Developer &nbsp;&middot;&nbsp; DevOps Enthusiast</p>
+      <address class="cv-contact">
+        <span>Phuc Tho, Hanoi, Vietnam</span>
+        <span class="dot">&middot;</span>
+        <a href="tel:+840353295709">0353 295 709</a>
+        <span class="dot">&middot;</span>
+        <a href="mailto:trungnghia180205@gmail.com">trungnghia180205@gmail.com</a>
+        <span class="dot">&middot;</span>
+        <a href="https://www.linkedin.com/in/nguyen-trung-nghia-366842157/"
+           target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <span class="dot">&middot;</span>
+        <a href="https://github.com/nguyentrungnghia1802"
+           target="_blank" rel="noopener noreferrer">GitHub</a>
+        <span class="dot">&middot;</span>
+        <a href="https://nguyentrungnghia1802.github.io/Profile/"
+           target="_blank" rel="noopener noreferrer">Portfolio</a>
+      </address>
+    </header>
+
+    <!-- ════════════════════════ PROFESSIONAL SUMMARY ════════════════════════ -->
+    <section class="cv-section" aria-labelledby="sec-summary">
+      <h2 class="section-title" id="sec-summary">Professional Summary</h2>
+      <p class="summary-text">
+        Information Technology student at the University of Engineering and Technology (UET), VNU Hanoi,
+        with hands-on experience in fullstack development, backend systems, and deployment workflows.
+        Proficient in Laravel, Spring Boot, React, Node.js, PostgreSQL, Docker, Linux VPS, Nginx, and
+        CI/CD pipelines. Proven team leader — serving as class president and leading multiple development
+        teams across academic and personal projects. Active research participant at VNU-SME Lab. Seeking
+        a Fullstack Developer role with a long-term career path toward DevOps engineering.
+      </p>
+    </section>
+
+    <!-- ══════════════════════════════ EDUCATION ══════════════════════════════ -->
+    <section class="cv-section" aria-labelledby="sec-edu">
+      <h2 class="section-title" id="sec-edu">Education</h2>
+      <div class="entry">
+        <div class="entry-row">
+          <span class="entry-org">University of Engineering and Technology (UET), Vietnam National University, Hanoi</span>
+          <span class="entry-date">Expected July 2027</span>
+        </div>
+        <div class="entry-row sub">
+          <span class="entry-role">Bachelor of Information Technology</span>
+          <span class="entry-detail">GPA: 3.36 / 4.0</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════ TECHNICAL SKILLS ═════════════════════════ -->
+    <section class="cv-section" aria-labelledby="sec-skills">
+      <h2 class="section-title" id="sec-skills">Technical Skills</h2>
+      <dl class="skills-grid">
+        <div class="skill-item">
+          <dt>Languages</dt>
+          <dd>PHP, Java, TypeScript, C++, Kotlin</dd>
+        </div>
+        <div class="skill-item">
+          <dt>Frontend</dt>
+          <dd>React, JavaFX</dd>
+        </div>
+        <div class="skill-item">
+          <dt>Backend</dt>
+          <dd>Laravel, Spring Boot, Node.js, Express.js, RESTful APIs</dd>
+        </div>
+        <div class="skill-item">
+          <dt>Databases</dt>
+          <dd>MySQL, PostgreSQL, SQLite</dd>
+        </div>
+        <div class="skill-item">
+          <dt>DevOps</dt>
+          <dd>Docker, Docker Compose, Linux VPS, Nginx, Apache, CI/CD, GitHub Actions</dd>
+        </div>
+        <div class="skill-item">
+          <dt>Tools</dt>
+          <dd>Git, GitHub, JUnit</dd>
+        </div>
+        <div class="skill-item skill-full">
+          <dt>Soft Skills</dt>
+          <dd>Leadership &amp; Team Management, Teamwork, Research, Problem&#8209;solving,
+              Documentation, Time Management, Engaging Presentation</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- ══════════════════════════ RESEARCH EXPERIENCE ════════════════════════ -->
+    <section class="cv-section" aria-labelledby="sec-research">
+      <h2 class="section-title" id="sec-research">Research Experience</h2>
+      <div class="entry">
+        <div class="entry-row">
+          <span class="entry-org">VNU-SME Lab</span>
+          <span class="entry-date">2024 &mdash; Present</span>
+        </div>
+        <div class="entry-row sub">
+          <span class="entry-role">Research Member</span>
+        </div>
+        <ul class="bullets">
+          <li>Participating in software engineering and research-oriented development activities.</li>
+          <li>Exploring UML/OCL modeling, graph databases, and model-driven engineering concepts.</li>
+          <li>Collaborating with lab members on system analysis and development-related tasks.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════ HIGHLIGHT PROJECTS ══════════════════════ -->
+    <section class="cv-section" aria-labelledby="sec-projects">
+      <h2 class="section-title" id="sec-projects">Highlight Projects</h2>
+
+      <!-- ── LINE Smart Queue Assistant ── -->
+      <div class="entry">
+        <div class="entry-row">
+          <span class="entry-org">
+            <a href="https://github.com/nguyentrungnghia1802/LINE_Smart_Queue_Assistant"
+               target="_blank" rel="noopener noreferrer" class="proj-link">LINE Smart Queue Assistant</a>
+          </span>
+          <span class="entry-date">Apr 2026 &ndash; Present</span>
+        </div>
+        <div class="entry-row sub">
+          <span class="entry-role">Personal Project</span>
+        </div>
+        <p class="tech-stack">TypeScript &middot; React &middot; Express.js &middot; PostgreSQL &middot; Docker &middot; Docker Compose &middot; CI Testing</p>
+        <p class="proj-desc">A smart queue management system integrated with the LINE messaging platform, enabling users to register, track, and manage service queues digitally in real time.</p>
+        <ul class="bullets">
+          <li>Designed and implemented RESTful backend APIs covering queue registration, service selection, real-time status tracking, and automated notification workflows.</li>
+          <li>Modelled a normalized PostgreSQL schema for users, services, queue entries, and notification records, ensuring data integrity and efficient querying.</li>
+          <li>Configured Docker Compose development environment and CI testing pipeline for consistent builds and quality assurance across environments.</li>
+        </ul>
+      </div>
+
+      <!-- ── Hanaya Shop ── -->
+      <div class="entry">
+        <div class="entry-row">
+          <span class="entry-org">
+            <a href="https://github.com/nguyentrungnghia1802/Hanaya-Shop"
+               target="_blank" rel="noopener noreferrer" class="proj-link">Hanaya Shop</a>
+            <a href="http://www.hanayashop.com/"
+               target="_blank" rel="noopener noreferrer" class="ext-link">&#8599;&nbsp;hanayashop.com</a>
+          </span>
+          <span class="entry-date">Jun 2025 &ndash; Aug 2025</span>
+        </div>
+        <div class="entry-row sub">
+          <span class="entry-role">Team Lead</span>
+          <span class="entry-detail">Team of 3</span>
+        </div>
+        <p class="tech-stack">Laravel &middot; MySQL &middot; Docker &middot; Docker Compose &middot; Linux VPS &middot; Nginx/Apache &middot; CI/CD &middot; GitHub Actions</p>
+        <p class="proj-desc">A full-featured e-commerce web application for a flower shop, supporting product cataloguing, online ordering, cart management, and store administration.</p>
+        <ul class="bullets">
+          <li>Led a team of 3 to deliver a complete e-commerce platform — product management, shopping cart, order processing, and admin dashboard — within 3 months.</li>
+          <li>Containerized the application with Docker Compose and automated deployments via GitHub Actions CI/CD pipeline to a Linux VPS.</li>
+          <li>Configured production web server (Nginx/Apache), managed domain setup, and handled end-to-end server administration.</li>
+        </ul>
+      </div>
+
+      <!-- ── Emotion Friend ── -->
+      <div class="entry">
+        <div class="entry-row">
+          <span class="entry-org">
+            <a href="https://github.com/nguyentrungnghia1802/emotion-friend"
+               target="_blank" rel="noopener noreferrer" class="proj-link">Emotion Friend</a>
+          </span>
+          <span class="entry-date">Apr 2026 &ndash; Present</span>
+        </div>
+        <div class="entry-row sub">
+          <span class="entry-role">Team Lead</span>
+          <span class="entry-detail">Team of 4</span>
+        </div>
+        <p class="tech-stack">Kotlin &middot; MySQL &middot; Docker &middot; Docker Compose &middot; CI Testing &middot; VPS &middot; CameraX</p>
+        <p class="proj-desc">An Android application leveraging real-time camera analysis to detect and respond to user emotions, delivering personalized and interactive experiences.</p>
+        <ul class="bullets">
+          <li>Led a team of 4 in designing the application architecture and implementing camera-based emotion detection using Kotlin and CameraX.</li>
+          <li>Managed backend and database integration with MySQL; established CI testing workflow and coordinated VPS-based deployment environment.</li>
+        </ul>
+      </div>
+
+      <!-- ── Library Management Application ── -->
+      <div class="entry">
+        <div class="entry-row">
+          <span class="entry-org">
+            <a href="https://github.com/nguyentrungnghia1802/Library_Management_Application"
+               target="_blank" rel="noopener noreferrer" class="proj-link">Library Management Application</a>
+          </span>
+          <span class="entry-date">Sep 2024 &ndash; Nov 2024</span>
+        </div>
+        <div class="entry-row sub">
+          <span class="entry-role">Team Member</span>
+          <span class="entry-detail">Team of 4</span>
+        </div>
+        <p class="tech-stack">Java Core &middot; JavaFX &middot; JUnit &middot; SQLite &middot; Unit Testing</p>
+        <p class="proj-desc">A desktop application for managing library resources — books, members, and borrowing records — built with a clean JavaFX interface and local SQLite storage.</p>
+        <ul class="bullets">
+          <li>Developed core modules for book cataloguing, member management, and borrowing/return tracking using JavaFX and SQLite.</li>
+          <li>Applied object-oriented design patterns and wrote JUnit unit tests to validate key business logic and ensure code reliability.</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <!-- ══════════════════════════════ CERTIFICATIONS ═════════════════════════ -->
+    <section class="cv-section" aria-labelledby="sec-cert">
+      <h2 class="section-title" id="sec-cert">Certifications</h2>
+      <p class="simple-line">
+        Japanese-Language Proficiency Test (JLPT) &mdash; <strong>N3</strong>
+        <a href="https://drive.google.com/file/d/1g7YC598zy8lwzlKo_7Ggcx4Ajqsd0SaU/view?usp=drive_link"
+           target="_blank" rel="noopener noreferrer" class="cert-link">View Certificate &#8599;</a>
+      </p>
+    </section>
+
+    <!-- ════════════════════════════════ LANGUAGES ════════════════════════════ -->
+    <section class="cv-section" aria-labelledby="sec-lang">
+      <h2 class="section-title" id="sec-lang">Languages</h2>
+      <dl class="lang-list">
+        <div class="lang-item">
+          <dt>Vietnamese</dt>
+          <dd>Native</dd>
+        </div>
+        <div class="lang-item">
+          <dt>Japanese</dt>
+          <dd>JLPT N3</dd>
+        </div>
+        <div class="lang-item">
+          <dt>English</dt>
+          <dd>Technical reading &amp; documentation</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- ════════════════════════════════ INTERESTS ════════════════════════════ -->
+    <section class="cv-section last" aria-labelledby="sec-interests">
+        <h2 class="section-title" id="sec-interests">Interests</h2>
+        <dl class="skills-grid">
+    
+            <div class="skill-item">
+                <dt>Film</dt>
+                <dd>Varied genres, with a preference for slice-of-life and science fiction</dd>
+            </div>
+            <div class="skill-item">
+                <dt>Sports</dt>
+                <dd>&middot; Football, roller skating (outdoor) <br> &middot; Chess, billiards (indoor)</dd>
+            </div>
+            <div class="skill-item skill-full">
+                <dt>Music</dt>
+                <dd>Frequent listener across a wide range of genres</dd>
+            </div>
+        </dl>
+    </section>
+
+    <!-- ════════════════════════════════ FOOTER ══════════════════════════════ -->
+    <footer class="cv-footer" role="contentinfo">
+      <span class="footer-identity">Nguyen Trung Nghia</span>
+      <span class="footer-meta">
+        <span>May 2026</span>
+      </span>
+    </footer>
+
+  </main>
+</body>
+</html>
